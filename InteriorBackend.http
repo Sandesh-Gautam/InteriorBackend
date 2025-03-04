@@ -1,0 +1,6 @@
+@InteriorBackend_HostAddress = http://localhost:5052
+
+GET {{InteriorBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
