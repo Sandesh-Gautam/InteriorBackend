@@ -133,7 +133,10 @@ namespace InteriorBackend.Services
 
         public async Task<User> FindUserByEmailAsync(string email)
         {
-            return await _context.Users.SingleOrDefaultAsync(u => u.Email == email);
+            return await _context.Users
+       .Where(u => u.Email == email)
+       .OrderBy(u => u.Id) // optional
+       .FirstOrDefaultAsync();
         }
 
         public async Task<string> GeneratePasswordResetTokenAsync(string userId)
