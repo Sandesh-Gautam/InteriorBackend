@@ -15,6 +15,10 @@ namespace InteriorBackend.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserSave>()
+    .Property(e => e.ImageUrlsJson)
+    .HasColumnName("ImageUrls");
+
 
         }
     }

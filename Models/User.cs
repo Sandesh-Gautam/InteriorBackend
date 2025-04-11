@@ -24,6 +24,6 @@ namespace InteriorBackend.Models
 
         public string? EmailConfirmationCode { get; set; }
 
-        public ICollection<Room> Rooms { get; set; } = new List<Room>();
+
     }
 }

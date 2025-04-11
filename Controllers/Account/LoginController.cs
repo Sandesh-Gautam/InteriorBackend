@@ -57,7 +57,7 @@ namespace InteriorBackend.Controllers
             // Generate JWT Token
             var token = GenerateJwtToken(user);
 
-            return Ok(new { message = "Login successful.", token });
+            return Ok(new { message = "Login successful.", token ,userId = user.Id });
         }
 
         private string GenerateJwtToken(User user)
